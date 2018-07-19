@@ -1,0 +1,17 @@
+* H2020 Visualization
+
+[[https://ec.europa.eu/programmes/horizon/2020][H2020]] is an Europpean programme for research and innovation
+
+** Steps
+
+*** Download the data 
+
+#+BEGIN_SRC bash
+./download.sh
+#+END_SRC
+
+*** Process it
+
+The raw data is 30Mb big, but a lot of the information we don't need, so
+basically we are going to remove descriptiobns and test
+
