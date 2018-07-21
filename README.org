@@ -13,5 +13,12 @@
 *** Process it
 
 The raw data is 30Mb big, but a lot of the information we don't need, so
-basically we are going to remove descriptiobns and test
+basically we are going to remove all text fields, and clean a bit some other
+fields.
 
+#+BEGIN_SRC bash
+virtualenv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python parse.py
+#+END_SRC
