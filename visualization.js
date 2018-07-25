@@ -18,11 +18,19 @@ const draw = _data => {
     var bar = chart.selectAll("g")
         .data(data)
         .enter().append("g")
-        .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; });
+        .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; })
 
     bar.append("rect")
         .attr("width", x)
-        .attr("height", barHeight - 1);
+        .attr("height", barHeight - 1)
+        .on("mouseover", function(){
+            d3.select(this).transition().duration(300)
+                .style("fill", "#FFD700");
+        })
+        .on("mouseout", function(){
+            d3.select(this).transition().duration(300)
+                .style("fill", "#333");
+        })
 
 }
 
