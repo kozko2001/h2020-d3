@@ -22,3 +22,13 @@ source venv/bin/activate
 pip install -r requirements.txt
 python parse.py
 #+END_SRC
+
+*** Show visualization
+
+#+BEGIN_SRC bash
+python3 -m http.server
+open http://localhost:8000/visualization.html
+#+END_SRC
+*** TODO
+
+- [ ] Add project duration in days
