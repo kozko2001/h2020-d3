@@ -33,3 +33,5 @@ open http://localhost:8000/visualization.html
 *** TODO
 
 - [ ] Add project duration in days
+- [ ] Add a chart like this with countries - http://mbostock.github.io/d3/talk/20111116/bundle.html
+  
