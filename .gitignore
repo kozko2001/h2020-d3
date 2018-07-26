@@ -1,3 +1,6 @@
 *.csv
 .#*
 venv/
+.cache
+dist
+node_modules/

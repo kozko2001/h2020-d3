@@ -26,9 +26,11 @@ python parse.py
 *** Show visualization
 
 #+BEGIN_SRC bash
-npm install http-server -g
-http-server . &
-open http://localhost:8000/visualization.html
+npm install
+
+npm start &
+npm run http &
+open http://localhost:8080/visualization.html
 #+END_SRC
 *** TODO
 

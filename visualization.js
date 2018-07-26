@@ -1,4 +1,10 @@
+import * as d3 from 'd3';
+
+window.d3 = d3; // For using on chrome console
+
 const draw = _data => {
+
+    // transform data
     const field = 'cost'
     const costs = _data.map(row => ({
         cost: parseInt(row.totalCost),
@@ -11,10 +17,12 @@ const draw = _data => {
     var width = 420,
         barHeight = 5;
 
+    // x is a function that convert from values, to pixels
     var x = row => d3.scaleLinear()
         .domain([0, maxValue])
         .range([0, width])(row[field]);
 
+    // set the properties of the svg chart
     var chart = d3.select(".chart")
         .attr("width", width)
         .attr("height", barHeight * data.length);
@@ -28,7 +36,6 @@ const draw = _data => {
         .attr("width", x)
         .attr("height", barHeight - 1)
         .on("mouseover", function(){
-            console.log(this.__data__.id)
             d3.select(this).transition().duration(300)
                 .style("fill", "#FFD700");
         })
